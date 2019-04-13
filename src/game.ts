@@ -31,10 +31,10 @@ export class Game {
     this.discardPile.push(card);
   }
 
-  canStore(index: PlayableCard): boolean {
+  canStore(index: PlayableCard, resourceCards = this.storedPile): boolean {
     let card = this.drawPile[index];
 
-    return card !== undefined && card.canStore && this.canAfford(expect(card.storeRequirements));
+    return card !== undefined && card.canStore && this.canAfford(expect(card.storeRequirements), resourceCards);
   }
 
   store(index: PlayableCard, removeCard?: Card): void {

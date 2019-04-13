@@ -63,6 +63,37 @@ export const TEMPLATES: CardTemplate[] = [{
     victoryPoints: 0
   }]
 }, {
+  name: 'Temple',
+  areas: [{
+    resources: [],
+    store: null,
+    rotate: [[Resource.Wood, Resource.Fish, Resource.Stone, Resource.Stone]],
+    flip: null,
+    upgradePoints: 0,
+    victoryPoints: 0
+  }, {
+    resources: [],
+    store: null,
+    rotate: null,
+    flip: [[Resource.Wood, Resource.Wood, Resource.Fish, Resource.Fish, Resource.Stone, Resource.Stone, Resource.Stone]],
+    upgradePoints: 1,
+    victoryPoints: 3
+  }, {
+    resources: [],
+    store: null,
+    rotate: null,
+    flip: null,
+    upgradePoints: 3,
+    victoryPoints: 10
+  }, {
+    resources: [],
+    store: null,
+    rotate: [[Resource.Wood, Resource.Wood, Resource.Wood, Resource.Fish, Resource.Fish, Resource.Fish, Resource.Stone, Resource.Stone, Resource.Stone, Resource.Stone]],
+    flip: null,
+    upgradePoints: 2,
+    victoryPoints: 6
+  }]
+}, {
   name: 'Canoe House',
   areas: [{
     resources: [Resource.Fish],

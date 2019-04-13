@@ -86,6 +86,16 @@ QUnit.test('canStore returns false if don\'t meet cost requirements', assert => 
   assert.equal(game.canStore(0), false);
 });
 
+QUnit.test('canStore returns when passing in the right resources', assert => {
+  let canoeHouse = expect(TEMPLATES.find(t => t.name === 'Market'));
+  let topCard = new Card(canoeHouse, 1);
+  let resource = new Card(canoeHouse, 2);
+  let game = new Game([topCard, resource]);
+  resource.store();
+
+  assert.equal(game.canStore(0, [resource]), true);
+});
+
 QUnit.test('store top card', assert => {
   let canoeHouse = expect(TEMPLATES.find(t => t.name === 'Canoe House'));
   let market = expect(TEMPLATES.find(t => t.name === 'Market'));
